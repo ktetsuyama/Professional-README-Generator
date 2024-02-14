@@ -50,48 +50,13 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-inquirer.prompt(questions).then((answer) => {
-	const readMeContent = `# ${answer.title}
 
-	## Description
-	
-	${answer.description}
-	
-	## Table of Contents
-	
-	- [Installation](#installation)
-	- [Usage](#usage)
-	- [Contributors](#contributors)
-	- [Tests](#tests)
-	- [Contact for Questions](#email)
-	- [License](#license)
-	
-	## Installation
-	
-	${answer.install}
-	
-	## Usage
-	
-	${answer.usage}
-	
-	## Contributors
-	
-	I worked with the folloing people on this project:
-	${answer.contributors}
-	
-	## Tests
-	
-	${answer.tests}
+fs.writeFile("README.md", readMeContent, (err) =>
+	err ? console.error(err) : console.log("Your README file is ready")
+);
 
+// TODO: Create a function to initialize app
+inquirer.prompt(questions).then(generateMarkdown(readMeContent));
 
-##Contact for Questions
-
-You can contact me here is you have questions: ${answer.email}
-
-	## License
-	
-	${generateMarkdown()}`;
-	fs.writeFile("README.md", readMeContent, (err) =>
-		err ? console.error(err) : console.log("Your README file is ready")
-	);
-});
+// Function call to initialize app
+generateMarkdown();
