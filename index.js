@@ -34,8 +34,19 @@ const questions = [
 	},
 	{
 		type: "input",
+		message: "What are the urls for the guides you used to build this project?",
+		name: "credits",
+	},
+	{
+		type: "input",
 		message: "Please provide some tests for your application",
 		name: "tests",
+	},
+	{
+		type: "input",
+		message:
+			"What is your GitHub username (for any questions people may have)?",
+		name: "github",
 	},
 	{
 		type: "input",

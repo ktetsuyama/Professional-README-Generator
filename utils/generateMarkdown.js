@@ -23,6 +23,7 @@ function generateMarkdown(data) {
 	- [Installation](#installation)
 	- [Usage](#usage)
 	- [Contributors](#contributors)
+  - [Credits](#credits)
 	- [Tests](#tests)
 	- [Contact for Questions](#email)
 	- [License](#license)
@@ -37,8 +38,14 @@ function generateMarkdown(data) {
 	
 	## Contributors
 	
-	I worked with the folloing people on this project:
+	I worked with the following people on this project:
 	${answer.contributors}
+
+  ## Credits
+
+  I used the following guides in building this application:
+
+  [${answer.credits}](${answer.credits})
 	
 	## Tests
 	
@@ -47,11 +54,14 @@ function generateMarkdown(data) {
 
 ##Contact for Questions
 
-You can contact me here is you have questions: ${answer.email}
+You can contact me here is you have questions: 
+
+Github: [${answer.github}](https://github.com/${answer.github})
+Email: [${answer.email}](mailto:${answer.email})
 
 	## License
 	
-	${answer.license}`;
+  This project is covered under a ${answer.license} license.`;
 }
 
 module.exports = generateMarkdown;
