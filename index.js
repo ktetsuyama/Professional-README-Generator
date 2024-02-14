@@ -12,23 +12,43 @@ const questions = [
 	},
 	{
 		type: "input",
-		message: "What is your location?",
-		name: "location",
+		message: "What is a description of your project?",
+		name: "description",
 	},
 	{
 		type: "input",
-		message: "Please provide a biography",
-		name: "bio",
+		message: "List the Table of Contents",
+		name: "table",
 	},
 	{
 		type: "input",
-		message: "What is your LinkedIn URL?",
-		name: "linkedIn",
+		message: "How is the project installed?",
+		name: "install",
 	},
 	{
 		type: "input",
-		message: "What is your GitHub URL?",
-		name: "gitHub",
+		message: "What is the usage of your project?",
+		name: "usage",
+	},
+	{
+		type: "input",
+		message: "What license is your project under?",
+		name: "license",
+	},
+	{
+		type: "input",
+		message: "What are the names of any contributors?",
+		name: "contributors",
+	},
+	{
+		type: "input",
+		message: "Please provide some tests for your application",
+		name: "usage",
+	},
+	{
+		type: "input",
+		message: "What is your email address (for any questions people may have)?",
+		name: "usage",
 	},
 ];
 
