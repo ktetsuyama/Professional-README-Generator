@@ -1,10 +1,28 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+	[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+	[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)
+
+	[![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/)
+
+	[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+
+	https://opensource.org/license/mit/
+
+	http://www.wtfpl.net/about/
+
+	https://creativecommons.org/licenses/by-sa/4.0/
+
+	https://www.gnu.org/licenses/gpl-3.0
+
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -23,7 +41,7 @@ function generateMarkdown(data) {
 	- [Installation](#installation)
 	- [Usage](#usage)
 	- [Contributors](#contributors)
-  - [Credits](#credits)
+    - [Credits](#credits)
 	- [Tests](#tests)
 	- [Contact for Questions](#email)
 	- [License](#license)

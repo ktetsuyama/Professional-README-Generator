@@ -53,9 +53,15 @@ const questions = [
 		name: "email",
 	},
 	{
-		type: "input",
-		message: "What license is your project under?",
+		type: "list",
 		name: "license",
+		message: "What license is your project under?",
+		choices: [
+			"MIT License",
+			"The Do What the Fuck You Want to Public License",
+			"CC Attribution-ShareAlike 4.0 International",
+			"GNU GPL v3",
+		],
 	},
 ];
 
