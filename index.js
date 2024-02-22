@@ -5,6 +5,14 @@ const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
+const choices = [
+	{ name: "MIT License", value: "mit" },
+	{ name: "The Do What the Fuck You Want to Public License", value: "wtf" },
+	{ name: "CC Attribution-ShareAlike 4.0 International", value: "ccsa" },
+	{ name: "GNU GPL v3", value: "gnu" },
+	{ name: "None", value: "none" },
+];
+
 const questions = [
 	{
 		type: "input",
@@ -33,7 +41,8 @@ const questions = [
 	},
 	{
 		type: "input",
-		message: "What are the urls for the guides you used to build this project?",
+		message:
+			"What are the urls for the guides you used to build this project? (hint: separate urls with a comma)",
 		name: "credits",
 	},
 	{
@@ -44,7 +53,7 @@ const questions = [
 	{
 		type: "input",
 		message:
-			"What is your GitHub username (for any questions people may have)?",
+			"What is your GitHub username (for any questions people may have)? (hint: use only lowercase letters)",
 		name: "github",
 	},
 	{
@@ -56,23 +65,25 @@ const questions = [
 		type: "list",
 		name: "license",
 		message: "What license is your project under?",
-		choices: [
-			"MIT License",
-			"The Do What the Fuck You Want to Public License",
-			"CC Attribution-ShareAlike 4.0 International",
-			"GNU GPL v3",
-		],
+		choices: choices,
 	},
 ];
 
 // TODO: Create a function to write README file
-
-fs.writeFile("README.md", readMeContent, (err) =>
-	err ? console.error(err) : console.log("Your README file is ready")
-);
+function writeReadme(readMeContent) {
+	fs.writeFile("README.md", readMeContent, (err) =>
+		err ? console.error(err) : console.log("Your README file is ready")
+	);
+}
 
 // TODO: Create a function to initialize app
-inquirer.prompt(questions).then(generateMarkdown(readMeContent));
+function initializeApp() {
+	inquirer.prompt(questions).then((result) => {
+		const markDown = generateMarkdown(result);
+		writeReadme(markDown);
+		return markDown;
+	});
+}
 
 // Function call to initialize app
-generateMarkdown();
+initializeApp();
