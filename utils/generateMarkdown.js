@@ -64,7 +64,7 @@ ${answer.description}
 - [Contributors](#contributors)
 - [Credits](#credits)
 - [Tests](#tests)
-- [Contact for Questions](#email)
+- [Contact for Questions](#contact)
 - [License](#license)
 	
 ## Installation
@@ -91,7 +91,7 @@ ${creditsMarkdown}
 ${answer.tests}
 
 
-## Contact for Questions
+## Contact
 
 You can contact me here is you have questions: 
 
