@@ -64,7 +64,7 @@ ${answer.description}
 - [Contributors](#contributors)
 - [Credits](#credits)
 - [Tests](#tests)
-- [Contact for Questions](#contact)
+- [Contact](#contact)
 - [License](#license)
 	
 ## Installation
