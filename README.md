@@ -24,7 +24,7 @@ This project creates a professional looking README quickly and consistently usin
 
 Here is a video of the application in action:
 
-[Link to Video](https://drive.google.com/file/d/1IkPGCWKzBZd0cKE3yODePlE5nJmz5VEB/view?usp=drive_link)
+[Link to Video](https://youtu.be/pDQVrwJ_JYM)
 
 ## Contributors
 
